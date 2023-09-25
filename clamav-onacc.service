@@ -6,7 +6,7 @@ After=clamav-daemon.service syslog.target network.target
 [Service]
 Type=simple
 User=root
-ExecStart=/usr/sbin/clamonacc -F --config-file=/etc/clamav/clamd.conf --log=/var/log/clamav/clamonacc.log --remove
+ExecStart=/usr/sbin/clamonacc -F --config-file=/etc/clamav/clamd.conf --log=/var/log/clamav/clamonacc.log --remove=yes
 Restart=on-failure
 RestartSec=120s
 
